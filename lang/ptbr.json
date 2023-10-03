@@ -1,3 +1,7 @@
 {
-    
+ "Jarnia": {
+    "Character": {
+        "JarniaSheetCharacter": "Ficha de Personagem"
+    }
+ }
 }
