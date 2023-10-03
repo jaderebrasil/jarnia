@@ -1,0 +1,9 @@
+{
+    "Actor": {
+        "types": [
+            "character"
+        ],
+        "htmlFields": ["biography", "description"],
+        "character": {}
+    }
+}

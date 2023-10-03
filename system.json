@@ -18,17 +18,16 @@
         "url": "https://github.com/MarxEckertBrasil"
       }
     ],
-    "scripts": [],
     "esmodules": [
-      "scripts/jarnia.mjs"
+      "Jarnia.mjs"
     ],
     "styles": [
-      "styles/jarnia.css"
+      "Jarnia.css"
     ],
     "packs": [],
   "languages": [
       {
-        "lang": "ptbr",
+        "lang": "en",
         "name": "Portugues Brasileiro",
         "path": "lang/ptbr.json"
       }
