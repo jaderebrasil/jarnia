@@ -35,10 +35,10 @@
     "socket": false,
     "gridDistance": 1.5,
     "gridUnits": "m",
-    "primaryTokenAttribute": "resources.health",
-    "secondaryTokenAttribute": "resources.energy",
+    "primaryTokenAttribute": "health",
+    "secondaryTokenAttribute": "energy",
     "url": "https://github.com/MarxEckertBrasil/jarnia/",
-    "background": "systems/mysystem/assets/splash.webp",
-    "manifest": "https://github.com/MarxEckertBrasil/jarnia/system.json",
+    "background": "systems/jarnia/assets/cover.jpg",
+    "manifest": "https://raw.githubusercontent.com/MarxEckertBrasil/jarnia/main/system.json",
     "download": ""
   }
