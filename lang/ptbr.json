@@ -2,7 +2,7 @@
  "Jarnia": {
     "Name": "Nome",
     "Attributes": "Atributos",
-    "Configuration": "Configuration",
+    "Configuration": "Configuração",
     "Character": {
         "JarniaSheetCharacter": "Ficha de Personagem",
         "Attributes": {

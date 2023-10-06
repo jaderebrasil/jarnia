@@ -7,6 +7,7 @@ export class JarniaSheetCharacter extends ActorSheet {
             width: 720,
             height: 900,
             tabs: [{navSelector: ".tabs", contentSelector: ".sheet-body", initial: "attributes"}],
+            classes: ["jarnia", "sheet", "actor", "character"], 
         });
     }
 

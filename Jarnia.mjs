@@ -4,7 +4,7 @@ import { JarniaSheetCharacter } from "./modules/character/JarniaSheetCharacter.m
 
 Hooks.on("init", () => {
     console.log("-- Initializing Jarnia RPG System --");
-    CONFIG.Actor.systemDataModels.character = CharacterData;
+    CONFIG.Actor.dataModels.character = CharacterData;
     CONFIG.Jarnia = JarniaConfig;
     
     // Register sheet application classes
@@ -20,6 +20,4 @@ Hooks.on("init", () => {
     Handlebars.registerHelper("debug", (msg) => console.log(msg));
 
     // utils.preloadHandlebarsTemplates();
-
-
 });

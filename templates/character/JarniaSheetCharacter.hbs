@@ -1,7 +1,7 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
-	<header class="sheet-header flexrow">
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
         <img class="profile" src="{{charImg}}" data-tooltip="{{charName}}" data-edit="img"/>
-			<section class="header-details flexrow">
+			<section class="header-details">
 	            <h1 class="charname">
 	                <input name="name" type="text" value="{{charName}}" placeholder="{{ localize 'Jarnia.Name' }}"/>
 	            </h1>
@@ -15,16 +15,15 @@
 
     <section class="sheet-body">
     	<div class="tab attributes flexrow" data-group="primary" data-tab="attributes">	
-    		<ul class="attribute-score-list flexrow">
+    		<ul class="attribute flexrow">
     		{{#each charBasicAttrs as |attr|}}
     			{{debug attribute}}
     			<li class="attribute basic-attribute" data-attribute="{{attr.name}}">
     				<h4 class="attribute-name box-title rollable">{{attr.label}}</h4>
-                    <div class="attribute-value multiple">
+                    <div class="attribute-stats multiple">
 	                    <input type="text" name="system.{{attr.name}}" value="{{attr.value}}"
-	                        class="attribute-score" placeholder="0" data-dtype="Number">
-						<span class="sep"> | </span>
-						<span class="attribute-defense">
+	                        class="attribute-value" placeholder="0" data-dtype="Number">
+						<span class="attribute-value">
                             {{attr.defense}}
                         </span>
                     </div>
