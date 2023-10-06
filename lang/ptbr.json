@@ -1,7 +1,17 @@
 {
  "Jarnia": {
+    "Name": "Nome",
+    "Attributes": "Atributos",
+    "Configuration": "Configuration",
     "Character": {
-        "JarniaSheetCharacter": "Ficha de Personagem"
+        "JarniaSheetCharacter": "Ficha de Personagem",
+        "Attributes": {
+            "Vigor": "Vigor",
+            "Ability": "Habilidade",
+            "Knowledge": "Conhecimento",
+            "Sentience": "Senciência",
+            "Influence": "Influência"
+        }
     }
  }
 }

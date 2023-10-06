@@ -17,5 +17,9 @@ Hooks.on("init", () => {
 
     // // Preload Handlebars helpers & partials
     // utils.registerHandlebarsHelpers();
+    Handlebars.registerHelper("debug", (msg) => console.log(msg));
+
     // utils.preloadHandlebarsTemplates();
+
+
 });
