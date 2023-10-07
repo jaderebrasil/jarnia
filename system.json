@@ -8,6 +8,7 @@
       "verified": "11",
       "maximum": "11"
     },
+
     "authors": [
       {
         "name": "Jader E. Brasil",
@@ -25,20 +26,28 @@
       "Jarnia.css"
     ],
     "packs": [],
-  "languages": [
+    "languages": [
       {
         "lang": "en",
         "name": "Portugues Brasileiro",
         "path": "lang/ptbr.json"
       }
     ],
+
+    "flags": {
+      "hotReload": {
+        "extensions": ["css", "hbs", "json"],
+        "path": ["systems/jarnia/Jarnia.css"]
+      }
+    },
+
     "socket": false,
     "gridDistance": 1.5,
     "gridUnits": "m",
-    "primaryTokenAttribute": "resources.health",
-    "secondaryTokenAttribute": "resources.energy",
+    "primaryTokenAttribute": "health",
+    "secondaryTokenAttribute": "energy",
     "url": "https://github.com/MarxEckertBrasil/jarnia/",
-    "background": "systems/mysystem/assets/splash.webp",
-    "manifest": "https://github.com/MarxEckertBrasil/jarnia/system.json",
+    "background": "systems/jarnia/assets/cover.jpg",
+    "manifest": "https://raw.githubusercontent.com/MarxEckertBrasil/jarnia/main/system.json",
     "download": ""
   }

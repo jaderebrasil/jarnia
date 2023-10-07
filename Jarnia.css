@@ -1,0 +1,190 @@
+/* ----------------------------------------- */
+/*  Global configs                           */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/*  Fonts                                    */
+/* ----------------------------------------- */
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('/systems/jarnia/assetsfonts/alegreya-sc/AlegreyaSC-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+.alegreya-label {
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+}
+/* ----------------------------------------- */
+/*  All Jarnia Apps                          */
+/* ----------------------------------------- */
+.jarnia {
+  /* ----------------------------------------- */
+  /*  Navigation                               */
+  /* ----------------------------------------- */
+}
+.jarnia h2,
+.jarnia h3,
+.jarnia h4 {
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+}
+.jarnia input[type="text"],
+.jarnia input[type="number"],
+.jarnia select {
+  height: calc(100% - 2px);
+  border: 1px solid #9a9991;
+  background: rgba(0, 0, 0, 0.05);
+  color: #191813;
+}
+.jarnia input[type="text"]:hover,
+.jarnia input[type="number"]:hover,
+.jarnia input[type="checkbox"]:hover,
+.jarnia input[type="text"]:focus,
+.jarnia input[type="number"]:focus,
+.jarnia input[type="checkbox"]:focus {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px #420084;
+}
+.jarnia .sheet-navigation {
+  flex: 0 0 30px;
+  margin-bottom: 5px;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+}
+.jarnia .sheet-navigation .item {
+  height: 30px;
+  line-height: 32px;
+  margin: 0 24px;
+  border-bottom: 3px solid #9a9991;
+}
+.jarnia .sheet-navigation .item.active {
+  border-bottom: 3px solid #420084;
+}
+/* ----------------------------------------- */
+/*  Character Sheet                          */
+/* ----------------------------------------- */
+.jarnia.sheet.actor.character {
+  min-width: 720px;
+  min-height: 680px;
+  /* ----------------------------------------- */
+  /*  Sheet Header                             */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /*  Sheet Body                               */
+  /* ----------------------------------------- */
+}
+.jarnia.sheet.actor.character header.sheet-header {
+  margin: auto 0;
+  height: 200px;
+}
+.jarnia.sheet.actor.character header.sheet-header img.profile {
+  flex: 0 0 160px;
+  max-width: 160px;
+  height: 160px;
+}
+.jarnia.sheet.actor.character .sheet-body {
+  /* ----------------------------------------- */
+  /*  Attributes                               */
+  /* ----------------------------------------- */
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.attributes ul.attribute {
+  flex: 0 0 60px;
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.attributes ul.attribute li.attribute {
+  height: 70px;
+  text-align: center;
+  border-bottom: 2px groove #eeede0;
+  position: relative;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.attributes ul.attribute li.attribute .attribute-name {
+  font-size: 18px;
+  margin: 0 5px;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.attributes ul.attribute li.attribute:last-child {
+  border-bottom: none;
+  margin-bottom: -3px;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.attributes ul.attribute li.attribute .attribute-stats span.sep {
+  border-left: 1px solid #9a9991;
+  width: 1px;
+  height: 30px;
+  display: inline-flex;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.attributes ul.attribute li.attribute .attribute-value {
+  width: 46px;
+  height: 40px;
+  margin: 0 auto;
+  line-height: 42px;
+  font-size: 40px;
+  font-weight: normal;
+}

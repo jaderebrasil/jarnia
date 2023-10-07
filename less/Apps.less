@@ -1,0 +1,51 @@
+@import url("Config.less");
+
+@navHeight: 30px;
+/* ----------------------------------------- */
+/*  All Jarnia Apps                          */
+/* ----------------------------------------- */
+
+.jarnia {
+	h2, h3, h4 {
+		.alegreya-label();
+	}
+
+	// Item Sheet form fields
+ 	input[type="text"],
+ 	input[type="number"],
+ 	select {
+ 	  height: calc(100% - 2px);
+ 	  border: 1px solid @colorGrey;
+ 	  background: rgba(0, 0, 0, .05);
+ 	  color: @colorFont;
+ 	}
+
+	// Hovered Fields
+	input[type="text"],
+	input[type="number"],
+	input[type="checkbox"] {
+		&:hover,
+		&:focus {
+	    	border: 1px solid rgba(0, 0, 0, .05);
+	    	box-shadow: 0 0 10px @colorPurple;
+		}
+	}
+
+	/* ----------------------------------------- */
+  	/*  Navigation                               */
+  	/* ----------------------------------------- */
+	.sheet-navigation {
+		flex: 0 0 @navHeight;
+		margin-bottom: 5px;
+		.alegreya-label();
+		.item {
+			height: 30px;
+			line-height: 32px;
+			margin: 0 24px;
+			border-bottom: 3px solid @colorGrey;
+			&.active {
+				border-bottom: 3px solid @colorPurple;
+			}
+		}
+	}
+}
