@@ -11,6 +11,12 @@
             "Knowledge": "Conhecimento",
             "Sentience": "Senciência",
             "Influence": "Influência"
+        },
+        "Status": {
+            "Health": "Vida",
+            "HealthMax": "Vida Máxima",
+            "Energy": "Energia",
+            "EnergyMax": "Energia Máxima"
         }
     }
  }

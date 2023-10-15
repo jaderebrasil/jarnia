@@ -32,12 +32,56 @@
 			flex: 0 0 60px;
 		    align-content: flex-start;
 		    list-style: none;
-		    margin: 0;
-		    padding: 0;
+			margin: 0;
+			padding: 0;
     		.alegreya-label();
     		border: @borderGroove;
     		border-radius: 3px;
+			
+    		li.attribute {
+    			height: 70px;
+	     	 	text-align: center;
+	     	 	border-bottom: @borderGroove;
+	     	 	position: relative;	
 
+	     	 	.attribute-name {
+	     	 		font-size: 18px;
+	     	 		margin: 0 5px;
+	     	 	}
+
+			 	&:last-child {
+		  	      border-bottom: none;
+		  	      margin-bottom: -3px;
+		  	    }
+
+		  	    .attribute-stats span.sep {
+					border-left: 1px solid @colorGrey;
+				    width: 1px;
+				    height: 30px;
+				    display: inline-flex;
+		  	    }
+
+				.attribute-value {
+					width: 46px;
+					height: 40px;
+					margin: 0 auto;
+					line-height: 42px;
+					font-size: 40px;
+					font-weight: normal;
+				}
+    		}
+  		}	
+
+		div.tab.attributes ul.status {
+			flex: 0 0 60px;
+		    align-content: flex-start;
+		    list-style: none;
+			margin: 0;
+			padding: 0;
+    		.alegreya-label();
+    		border: @borderGroove;
+    		border-radius: 3px;
+			
     		li.attribute {
     			height: 70px;
 	     	 	text-align: center;
