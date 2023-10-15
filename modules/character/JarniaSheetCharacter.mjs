@@ -16,11 +16,19 @@ export class JarniaSheetCharacter extends ActorSheet {
         const sourceContext = await super.getData(options);
 
         const attributePacker = (attrName) => {return {
-            "name": attrName,
-            "label": game.i18n.localize(`Jarnia.Character.Attributes.${capitalize(attrName)}`),
-            "value": sourceContext.actor.system[attrName], 
-            "defense": 11 + sourceContext.actor.system[attrName], 
-        };};
+                "name": attrName,
+                "label": game.i18n.localize(`Jarnia.Character.Attributes.${capitalize(attrName)}`),
+                "value": sourceContext.actor.system[attrName], 
+                "defense": 11 + sourceContext.actor.system[attrName], 
+            };
+        };
+
+        const statusPacker = (statusName) => {return {
+                "name": statusName,
+                "label": game.i18n.localize(`Jarnia.Character.Status.${capitalize(statusName)}`),
+                "value": sourceContext.actor.system[statusName],
+            };
+        };
 
         return {
             character: sourceContext.actor.system,
@@ -30,6 +38,8 @@ export class JarniaSheetCharacter extends ActorSheet {
             cssClass: this.actor.isOwner? "editable" : "locked",
 
             charBasicAttrs: CONFIG.Jarnia.charBasicAttrs.map(attributePacker),
+            charStatus: CONFIG.Jarnia.charStatus.map(statusPacker),
+            charMaxStatus: CONFIG.Jarnia.charMaxStatus.map(statusPacker),
         };
     }
 

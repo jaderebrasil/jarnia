@@ -16,19 +16,40 @@
     <section class="sheet-body">
     	<div class="tab attributes flexrow" data-group="primary" data-tab="attributes">	
     		<ul class="attribute flexrow">
-    		{{#each charBasicAttrs as |attr|}}
-    			{{debug attribute}}
-    			<li class="attribute basic-attribute" data-attribute="{{attr.name}}">
-    				<h4 class="attribute-name box-title rollable">{{attr.label}}</h4>
-                    <div class="attribute-stats multiple">
-	                    <input type="text" name="system.{{attr.name}}" value="{{attr.value}}"
-	                        class="attribute-value" placeholder="0" data-dtype="Number">
-						<span class="attribute-value">
-                            {{attr.defense}}
-                        </span>
-                    </div>
-                </li>
-    		{{/each}}
+				{{#each charBasicAttrs as |attr|}}
+					{{debug attr}}
+					<li class="attribute basic-attribute" data-attribute="{{attr.name}}">
+						<h4 class="attribute-name box-title rollable">{{attr.label}}</h4>
+						<div class="attribute-stats multiple">
+							<input type="text" name="system.{{attr.name}}" value="{{attr.value}}"
+								class="attribute-value" placeholder="0" data-dtype="Number">
+							<span class="attribute-value">
+								{{attr.defense}}
+							</span>
+						</div>
+					</li>
+				{{/each}}
+    		</ul>
+			<ul class="status flexrow">
+				{{#each charStatus as |stat|}}
+					{{debug stat}}
+					<li class="attribute basic-status" data-attribute="{{stat.name}}">
+						<h4 class="attribute-name box-title rollable">{{stat.label}}</h4>
+						<div class="attribute-stats multiple">
+							<input type="text" name="system.{{stat.name}}" value="{{stat.value}}"
+								class="attribute-value" placeholder="0" data-dtype="Number">
+						</div>
+					</li>
+				{{/each}}
+    		</ul>
+			<ul class="status flexrow">
+				{{#each charMaxStatus as |stat|}}
+					{{debug stat}}
+					<li class="attribute basic-status" data-attribute="{{stat.name}}">
+						<h5 class="attribute-name box-title rollable">{{stat.label}}</h5>
+						<p class="attribute-name box-title rollable">{{stat.value}}</p>
+					</li>
+				{{/each}}
     		</ul>
     	</div>
 
