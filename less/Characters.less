@@ -115,5 +115,47 @@
 				}
     		}
   		}	
+
+		div.tab.config ul.status {
+			flex: 0 0 60px;
+		    align-content: flex-start;
+		    list-style: none;
+			margin: 0;
+			padding: 0;
+    		.alegreya-label();
+    		border: @borderGroove;
+    		border-radius: 9px;
+
+    		li.attribute {
+				text-align: center;
+	     	 	border-bottom: @borderGroove;
+	     	 	position: relative;
+
+	     	 	.attribute-name {
+	     	 		font-size: 18px;
+	     	 		margin: 5px 5px;
+	     	 	}
+
+			 	&:last-child {
+		  	      border-bottom: none;
+		  	    }
+
+		  	    .attribute-stats span.sep {
+					border-left: 1px solid @colorGrey;
+				    width: 1px;
+				    height: 30px;
+				    display: inline-flex;
+		  	    }
+
+				.attribute-value {
+					width: 46px;
+					height: 40px;
+					margin: 0 auto 7px;
+					line-height: 42px;
+					font-size: 40px;
+					font-weight: normal;
+				}
+    		}
+  		}
 	}
 }

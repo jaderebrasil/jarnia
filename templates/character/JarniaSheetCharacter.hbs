@@ -46,15 +46,25 @@
 				{{#each charMaxStatus as |stat|}}
 					{{debug stat}}
 					<li class="attribute basic-status" data-attribute="{{stat.name}}">
-						<h5 class="attribute-name box-title rollable">{{stat.label}}</h5>
-						<p class="attribute-name box-title rollable">{{stat.value}}</p>
-					</li>
-				{{/each}}
-    		</ul>
-    	</div>
+                    <h5 class="attribute-name box-title rollable">{{stat.label}}</h5>
+                    <p class="attribute-name box-title rollable">{{stat.value}}</p>
+                </li>
+            {{/each}}
+            </ul>
+        </div>
 
-    	<div class="tab config flexrow" data-group="primary" data-tab="config">	
-    		<h4> Nothing to see here. </h4>	
-    	</div>
+        <div class="tab config flexrow" data-group="primary" data-tab="config">
+			<ul class="status flexrow">
+				{{#each charMaxStatus as |stat|}}
+					<li class="attribute basic-status" data-attribute="{{stat.name}}">
+                        <h4 class="attribute-name box-title">{{stat.label}}</h5>
+                        <div class="attribute-stats multiple">
+                            <input type="text" name="system.{{stat.name}}" value="{{stat.value}}"
+                                class="attribute-value" placeholder="0" data-dtype="Number">
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
     </section>
 </form>

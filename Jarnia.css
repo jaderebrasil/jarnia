@@ -230,3 +230,42 @@
   font-size: 40px;
   font-weight: normal;
 }
+.jarnia.sheet.actor.character .sheet-body div.tab.config ul.status {
+  flex: 0 0 60px;
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  border: 2px groove #eeede0;
+  border-radius: 9px;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.config ul.status li.attribute {
+  text-align: center;
+  border-bottom: 2px groove #eeede0;
+  position: relative;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.config ul.status li.attribute .attribute-name {
+  font-size: 18px;
+  margin: 5px 5px;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.config ul.status li.attribute:last-child {
+  border-bottom: none;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.config ul.status li.attribute .attribute-stats span.sep {
+  border-left: 1px solid #9a9991;
+  width: 1px;
+  height: 30px;
+  display: inline-flex;
+}
+.jarnia.sheet.actor.character .sheet-body div.tab.config ul.status li.attribute .attribute-value {
+  width: 46px;
+  height: 40px;
+  margin: 0 auto 7px;
+  line-height: 42px;
+  font-size: 40px;
+  font-weight: normal;
+}
