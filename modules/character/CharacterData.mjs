@@ -54,11 +54,6 @@ export class CharacterData extends foundry.abstract.DataModel {
                 initial: 0,
                 integer: true
             }),
-            dodge: new fields.NumberField({
-                required: true,
-                initial: 0,
-                integer: true
-            }),
         };
     }
 }

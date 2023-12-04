@@ -17,8 +17,8 @@
     	<div class="tab attributes flexrow" data-group="primary" data-tab="attributes">	
     		<ul class="attribute flexrow">
 				{{#each charBasicAttrs as |attr|}}
-					{{debug attr}}
-					<li class="attribute basic-attribute" data-attribute="{{attr.name}}">
+                    {{!debug attr}}
+ 					<li class="attribute basic-attribute" data-attribute="{{attr.name}}">
 						<h4 class="attribute-name box-title rollable">{{attr.label}}</h4>
 						<div class="attribute-stats multiple">
 							<input type="text" name="system.{{attr.name}}" value="{{attr.value}}"
@@ -32,36 +32,31 @@
     		</ul>
 			<ul class="status flexrow">
 				{{#each charStatus as |stat|}}
-					{{debug stat}}
 					<li class="attribute basic-status" data-attribute="{{stat.name}}">
 						<h4 class="attribute-name box-title rollable">{{stat.label}}</h4>
 						<div class="attribute-stats multiple">
 							<input type="text" name="system.{{stat.name}}" value="{{stat.value}}"
 								class="attribute-value" placeholder="0" data-dtype="Number">
+
+                            <!-- Caution: Do not fill in the `name` here,
+                                 as during the submit it'll send the `statMax` value twice. -->
+                            <input disabled="1" type="text" name="" value="{{stat.valueMax}}"
+                                   class="attribute-max" placeholder="0" data-dtype="Number">
 						</div>
 					</li>
 				{{/each}}
     		</ul>
-			<ul class="status flexrow">
-				{{#each charMaxStatus as |stat|}}
-					{{debug stat}}
-					<li class="attribute basic-status" data-attribute="{{stat.name}}">
-                    <h5 class="attribute-name box-title rollable">{{stat.label}}</h5>
-                    <p class="attribute-name box-title rollable">{{stat.value}}</p>
-                </li>
-            {{/each}}
-            </ul>
         </div>
 
         <div class="tab config flexrow" data-group="primary" data-tab="config">
-			<ul class="status flexrow">
+			<ul class="status sheet-config flexrow">
 				{{#each charMaxStatus as |stat|}}
 					<li class="attribute basic-status" data-attribute="{{stat.name}}">
                         <h4 class="attribute-name box-title">{{stat.label}}</h5>
                         <div class="attribute-stats multiple">
                             <input type="text" name="system.{{stat.name}}" value="{{stat.value}}"
-                                class="attribute-value" placeholder="0" data-dtype="Number">
-                        </div>
+                                 class="attribute-value" placeholder="0" data-dtype="Number">
+                       </div>
                     </li>
                 {{/each}}
             </ul>

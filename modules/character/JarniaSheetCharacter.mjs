@@ -23,7 +23,19 @@ export class JarniaSheetCharacter extends ActorSheet {
             };
         };
 
-        const statusPacker = (statusName) => {return {
+        const statusPacker = (statusName) => {
+            let max = `${statusName}Max`;
+            return {
+                "name": statusName,
+                "nameMax": max,
+                "label": game.i18n.localize(`Jarnia.Character.Status.${capitalize(statusName)}`),
+                "value": sourceContext.actor.system[statusName],
+                "valueMax": sourceContext.actor.system[max],
+            };
+        };
+
+        const statusMaxPacker = (statusName) => {
+            return {
                 "name": statusName,
                 "label": game.i18n.localize(`Jarnia.Character.Status.${capitalize(statusName)}`),
                 "value": sourceContext.actor.system[statusName],
@@ -39,7 +51,7 @@ export class JarniaSheetCharacter extends ActorSheet {
 
             charBasicAttrs: CONFIG.Jarnia.charBasicAttrs.map(attributePacker),
             charStatus: CONFIG.Jarnia.charStatus.map(statusPacker),
-            charMaxStatus: CONFIG.Jarnia.charMaxStatus.map(statusPacker),
+            charMaxStatus: CONFIG.Jarnia.charMaxStatus.map(statusMaxPacker),
         };
     }
 
