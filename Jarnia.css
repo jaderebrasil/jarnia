@@ -104,6 +104,10 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 10px #420084;
 }
+.jarnia input[type="text"][disabled],
+.jarnia input[type="number"][disabled] {
+  pointer-events: none;
+}
 .jarnia .sheet-navigation {
   flex: 0 0 30px;
   margin-bottom: 5px;

@@ -31,6 +31,14 @@
 		}
 	}
 
+    // Disabled inputs
+	input[type="text"],
+	input[type="number"] {
+        &[disabled] {
+            pointer-events: none;
+        }
+    }
+
 	/* ----------------------------------------- */
   	/*  Navigation                               */
   	/* ----------------------------------------- */
