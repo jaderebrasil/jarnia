@@ -42,6 +42,23 @@ export class JarniaSheetCharacter extends ActorSheet {
             };
         };
 
+        const getEnrichHTML = async (htmlField) => await TextEditor.enrichHTML(htmlField, {
+            secrets: sourceContext.actor.isOwner,
+            async: true,
+            relativeTo: sourceContext.actor
+        });
+
+        const physSlots = sourceContext.actor.system.physicalSlots;
+        const nslots = sourceContext.actor.system.vigor + 10;
+
+        while (physSlots.length < nslots) {
+            physSlots.push('');
+        }
+
+        while (physSlots.length > nslots) {
+            physSlots.pop();
+        }
+
         return {
             character: sourceContext.actor.system,
             charImg: sourceContext.actor.img,
@@ -52,6 +69,13 @@ export class JarniaSheetCharacter extends ActorSheet {
             charBasicAttrs: CONFIG.Jarnia.charBasicAttrs.map(attributePacker),
             charStatus: CONFIG.Jarnia.charStatus.map(statusPacker),
             charMaxStatus: CONFIG.Jarnia.charMaxStatus.map(statusMaxPacker),
+
+            charSkills: await getEnrichHTML(sourceContext.actor.system.skills),
+            charTraits: await getEnrichHTML(sourceContext.actor.system.traits),
+            charDescription: await getEnrichHTML(sourceContext.actor.system.description),
+            charGifts: await getEnrichHTML(sourceContext.actor.system.gifts),
+            charVocations: await getEnrichHTML(sourceContext.actor.system.vocations),
+            charPhysicalSlots: sourceContext.actor.system.physicalSlots,
         };
     }
 

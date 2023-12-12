@@ -87,6 +87,9 @@
   font-weight: bold;
   font-style: normal;
 }
+.jarnia .editor {
+  min-height: 30px;
+}
 .jarnia input[type="text"],
 .jarnia input[type="number"],
 .jarnia select {
@@ -168,7 +171,6 @@
 }
 .jarnia.sheet.actor.character .sheet-body ul.attribute li.attribute,
 .jarnia.sheet.actor.character .sheet-body ul.status li.attribute {
-  height: 70px;
   text-align: center;
   border-bottom: 2px groove #eeede0;
   position: relative;
@@ -211,7 +213,31 @@
 }
 .jarnia.sheet.actor.character .sheet-body ul.status {
   flex: 0 0 120px;
+  height: 150px;
 }
 .jarnia.sheet.actor.character .sheet-body ul.sheet-config {
   flex: 0 0 150px;
+}
+.jarnia.sheet.actor.character .sheet-body .physical-slots {
+  width: 100%;
+  position: relative;
+}
+.jarnia.sheet.actor.character .sheet-body .physical-slots .physical-slots-row {
+  position: relative;
+  margin: 0 auto;
+  width: 95%;
+}
+.jarnia.sheet.actor.character .sheet-body .physical-slots .physical-slots-row .item-slot {
+  height: 30px;
+  margin: 0 0 0 3%;
+  width: 90%;
+}
+.jarnia.sheet.actor.character .sheet-body .physical-slots .physical-slots-row .item-slot.stressed {
+  color: gray;
+  text-decoration: line-through;
+  pointer-events: none;
+}
+.jarnia.sheet.actor.character .sheet-body .physical-slots .physical-slots-row .item-stressed {
+  margin: 1%;
+  vertical-align: middle;
 }

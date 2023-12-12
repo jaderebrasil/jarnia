@@ -10,6 +10,8 @@
 
     <nav class="sheet-navigation tabs" data-group="primary"> 
     	<a class="item active" data-tab="attributes">{{ localize "Jarnia.Attributes" }}</a>	
+    	<a class="item" data-tab="characteristics">Características</a>
+    	<a class="item" data-tab="equips">Equipamentos</a>
     	<a class="item" data-tab="config">{{localize "Jarnia.Configuration"}}</a>	
     </nav>
 
@@ -46,6 +48,54 @@
 					</li>
 				{{/each}}
     		</ul>
+
+            <div>
+                <div>
+                    <h5>Descrição</h5>
+                    {{editor charDescription target="system.description" button=true editable=true}}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab characteristics flexrow" data-group="primary" data-tab="characteristics">
+            <div>
+                <div>
+                    <h5>Traços</h5>
+                    {{editor charTraits target="system.traits" button=true editable=true}}
+                </div>
+
+                <div>
+                    <h5>Perícias</h5>
+                    {{editor charSkills target="system.skills" button=true editable=true}}
+                </div>
+
+                <div>
+                    <h5>Vocações</h5>
+                    {{editor charVocations target="system.vocations" button=true editable=true}}
+                </div>
+
+                <div>
+                    <h5>Dons</h5>
+                    {{editor charGifts target="system.gifts" button=true editable=true}}
+                </div>
+            </div>
+        </div>
+
+        <div class="tab equips flexrow" data-group="primary" data-tab="equips">
+            <div class="physical-slots">
+            {{#each charPhysicalSlots as |ps key|}}
+            <div class="physical-slots-row">
+                <input type="text" name="system.physicalSlots.{{@key}}.name" value="{{ps.name}}"
+                       class="item-slot {{#if ps.stressed}}stressed{{/if}}"
+                       {{#if ps.stressed}}tabindex="-1"{{/if}}
+                       placeholder="" data-dtype="String">
+
+                <input class="item-stressed" type="checkbox" name="system.physicalSlots.{{@key}}.stressed"
+                       {{checked ps.stressed}}>
+            </div>
+            {{/each}}
+            </div>
         </div>
 
         <div class="tab config flexrow" data-group="primary" data-tab="config">

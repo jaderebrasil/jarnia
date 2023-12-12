@@ -54,6 +54,14 @@ export class CharacterData extends foundry.abstract.DataModel {
                 initial: 0,
                 integer: true
             }),
+            physicalSlots: new fields.ArrayField(new fields.SchemaField({
+                name: new fields.StringField({initial: "", trim: true}),
+                stressed: new fields.BooleanField(),
+            })),
+            traits: new fields.HTMLField({initial: "", trim: true}),
+            skills: new fields.HTMLField({initial: "", trim: true}),
+            gifts: new fields.HTMLField({initial: "", trim: true}),
+            vocations: new fields.HTMLField({initial: "", trim: true}),
         };
     }
 }

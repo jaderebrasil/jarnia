@@ -10,7 +10,8 @@
             "Ability": "Habilidade",
             "Knowledge": "Conhecimento",
             "Sentience": "Senciência",
-            "Influence": "Influência"
+            "Influence": "Influência",
+            "Armor": "Armadura"
         },
         "Status": {
             "Health": "Vida",
