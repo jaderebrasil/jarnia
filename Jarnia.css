@@ -252,10 +252,12 @@
   margin: 0;
   padding: 3px 0 0 3px;
 }
-.jarnia.sheet.actor.character .sheet-body .html-text div.tinymce {
+.jarnia.sheet.actor.character .sheet-body .html-text div.tinymce,
+.jarnia.sheet.actor.character .sheet-body .html-text div.editor {
   height: 100%;
 }
-.jarnia.sheet.actor.character .sheet-body .html-text div.tinymce div.tox {
+.jarnia.sheet.actor.character .sheet-body .html-text div.tinymce div.tox,
+.jarnia.sheet.actor.character .sheet-body .html-text div.editor div.tox {
   height: 100%;
 }
 .jarnia.sheet.actor.character .sheet-body ul.sheet-config {
