@@ -155,8 +155,29 @@
   /*  Attributes                               */
   /* ----------------------------------------- */
 }
-.jarnia.sheet.actor.character .sheet-body ul.attribute,
-.jarnia.sheet.actor.character .sheet-body ul.status {
+.jarnia.sheet.actor.character .sheet-body .border-column {
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 2px groove #eeede0;
+  border-radius: 9px;
+}
+.jarnia.sheet.actor.character .sheet-body div.first-column {
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 2px groove #eeede0;
+  border-radius: 9px;
+  flex: 0 0 60px;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+}
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.attribute,
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status {
   flex: 0 0 60px;
   align-content: flex-start;
   list-style: none;
@@ -169,30 +190,33 @@
   border: 2px groove #eeede0;
   border-radius: 9px;
 }
-.jarnia.sheet.actor.character .sheet-body ul.attribute li.attribute,
-.jarnia.sheet.actor.character .sheet-body ul.status li.attribute {
-  text-align: center;
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.attribute .border-groove,
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status .border-groove {
   border-bottom: 2px groove #eeede0;
+}
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.attribute .border-groove:last-child,
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status .border-groove:last-child {
+  border-bottom: none;
+}
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.attribute li.attribute,
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status li.attribute {
+  text-align: center;
   position: relative;
 }
-.jarnia.sheet.actor.character .sheet-body ul.attribute li.attribute .attribute-name,
-.jarnia.sheet.actor.character .sheet-body ul.status li.attribute .attribute-name {
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.attribute li.attribute .attribute-name,
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status li.attribute .attribute-name {
   font-size: 18px;
   margin: 0 5px;
 }
-.jarnia.sheet.actor.character .sheet-body ul.attribute li.attribute:last-child,
-.jarnia.sheet.actor.character .sheet-body ul.status li.attribute:last-child {
-  border-bottom: none;
-}
-.jarnia.sheet.actor.character .sheet-body ul.attribute li.attribute .attribute-stats span.sep,
-.jarnia.sheet.actor.character .sheet-body ul.status li.attribute .attribute-stats span.sep {
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.attribute li.attribute .attribute-stats span.sep,
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status li.attribute .attribute-stats span.sep {
   border-left: 1px solid #9a9991;
   width: 1px;
   height: 30px;
   display: inline-flex;
 }
-.jarnia.sheet.actor.character .sheet-body ul.attribute li.attribute .attribute-value,
-.jarnia.sheet.actor.character .sheet-body ul.status li.attribute .attribute-value {
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.attribute li.attribute .attribute-value,
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status li.attribute .attribute-value {
   width: 46px;
   height: 40px;
   margin: 0 auto 5px;
@@ -200,8 +224,8 @@
   font-size: 40px;
   font-weight: normal;
 }
-.jarnia.sheet.actor.character .sheet-body ul.attribute li.attribute .attribute-max,
-.jarnia.sheet.actor.character .sheet-body ul.status li.attribute .attribute-max {
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.attribute li.attribute .attribute-max,
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status li.attribute .attribute-max {
   width: 46px;
   height: 40px;
   margin: 0 auto 5px;
@@ -211,9 +235,28 @@
   border: none;
   background: none;
 }
-.jarnia.sheet.actor.character .sheet-body ul.status {
+.jarnia.sheet.actor.character .sheet-body div.first-column ul.status {
   flex: 0 0 120px;
-  height: 150px;
+  height: auto;
+}
+.jarnia.sheet.actor.character .sheet-body .html-text {
+  height: 100%;
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 2px groove #eeede0;
+  border-radius: 9px;
+}
+.jarnia.sheet.actor.character .sheet-body .html-text .html-title {
+  margin: 0;
+  padding: 3px 0 0 3px;
+}
+.jarnia.sheet.actor.character .sheet-body .html-text div.tinymce {
+  height: 100%;
+}
+.jarnia.sheet.actor.character .sheet-body .html-text div.tinymce div.tox {
+  height: 100%;
 }
 .jarnia.sheet.actor.character .sheet-body ul.sheet-config {
   flex: 0 0 150px;

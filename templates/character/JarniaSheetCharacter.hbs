@@ -17,66 +17,67 @@
 
     <section class="sheet-body">
     	<div class="tab attributes flexrow" data-group="primary" data-tab="attributes">	
-    		<ul class="attribute flexrow">
-				{{#each charBasicAttrs as |attr|}}
-                    {{!debug attr}}
- 					<li class="attribute basic-attribute" data-attribute="{{attr.name}}">
-						<h4 class="attribute-name box-title rollable">{{attr.label}}</h4>
-						<div class="attribute-stats multiple">
-							<input type="text" name="system.{{attr.name}}" value="{{attr.value}}"
-								class="attribute-value" placeholder="0" data-dtype="Number">
-							<span class="attribute-value">
-								{{attr.defense}}
-							</span>
-						</div>
-					</li>
-				{{/each}}
-    		</ul>
-			<ul class="status flexrow">
-				{{#each charStatus as |stat|}}
-					<li class="attribute basic-status" data-attribute="{{stat.name}}">
-						<h4 class="attribute-name box-title rollable">{{stat.label}}</h4>
-						<div class="attribute-stats multiple">
-							<input type="text" name="system.{{stat.name}}" value="{{stat.value}}"
-								class="attribute-value" placeholder="0" data-dtype="Number">
+            <div class="first-column">
+                <ul class="attribute flexrow">
+                    {{#each charBasicAttrs as |attr|}}
+                        {{!debug attr}}
+                        <li class="attribute basic-attribute border-groove" data-attribute="{{attr.name}}">
+                            <h4 class="attribute-name box-title rollable">{{attr.label}}</h4>
+                            <div class="attribute-stats multiple">
+                                <input type="text" name="system.{{attr.name}}" value="{{attr.value}}"
+                                    class="attribute-value" placeholder="0" data-dtype="Number">
+                                <span class="attribute-value">
+                                    {{attr.defense}}
+                                </span>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+                <ul class="status flexrow">
+                    {{#each charStatus as |stat|}}
+                        <li class="attribute basic-status" data-attribute="{{stat.name}}">
+                            <h4 class="attribute-name box-title rollable">{{stat.label}}</h4>
+                            <div class="attribute-stats multiple">
+                                <input type="text" name="system.{{stat.name}}" value="{{stat.value}}"
+                                    class="attribute-value" placeholder="0" data-dtype="Number">
 
-                            <!-- Caution: Do not fill in the `name` here,
-                                 as during the submit it'll send the `statMax` value twice. -->
-                            <input disabled="1" type="text" name="" value="{{stat.valueMax}}"
-                                   class="attribute-max" placeholder="0" data-dtype="Number">
-						</div>
-					</li>
-				{{/each}}
-    		</ul>
+                                <!-- Caution: Do not fill in the `name` here,
+                                    as during the submit it'll send the `statMax` value twice. -->
+                                <input disabled="1" type="text" name="" value="{{stat.valueMax}}"
+                                    class="attribute-max" placeholder="0" data-dtype="Number">
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
 
-            <div>
-                <div>
-                    <h5>Descrição</h5>
+            <div class="second-column">
+                <div class="html-text">
+                    <h5 class="html-title">Descrição</h5>
                     {{editor charDescription target="system.description" button=true editable=true}}
                 </div>
             </div>
-
         </div>
 
         <div class="tab characteristics flexrow" data-group="primary" data-tab="characteristics">
-            <div>
-                <div>
-                    <h5>Traços</h5>
+            <div class="html-text-rows">
+                <div class="html-text">
+                    <h5 class="html-title">Traços</h5>
                     {{editor charTraits target="system.traits" button=true editable=true}}
                 </div>
 
-                <div>
-                    <h5>Perícias</h5>
+                <div class="html-text">
+                    <h5 class="html-title">Perícias</h5>
                     {{editor charSkills target="system.skills" button=true editable=true}}
                 </div>
 
-                <div>
-                    <h5>Vocações</h5>
+                <div class="html-text">
+                    <h5 class="html-title">Vocações</h5>
                     {{editor charVocations target="system.vocations" button=true editable=true}}
                 </div>
 
-                <div>
-                    <h5>Dons</h5>
+                <div class="html-text">
+                    <h5 class="html-title">Dons</h5>
                     {{editor charGifts target="system.gifts" button=true editable=true}}
                 </div>
             </div>
